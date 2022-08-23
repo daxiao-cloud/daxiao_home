@@ -30,7 +30,7 @@ const withProjectPage = ({
           justify='center'
           background={'linear-gradient(to bottom right, #00CCFF, #0033CC)'}
         >
-          {/* <Head headerStyle={head.style?.header} /> */}
+          <Head headerStyle={head.style?.header} />
           <Box
             width={{ max: '100vw', width: '1920px' }}
             height={{ max: '100vh', height: '1080px' }}

@@ -6,35 +6,60 @@ import Router from 'next/router';
 // import { SelectLanguageGrommet } from '../index';
 import { sessionKey, tokenKey } from '../../data/cookie';
 
+const head = {
+  '/about': {
+    name: '公司介绍',
+  },
+  '/product': {
+    name: '产品方案',
+  },
+  '/aiot': {
+    name: '智能设备',
+  },
+  '/case': {
+    name: '案例介绍',
+  },
+  '/backgroud': {
+    name: '研发背景',
+  },
+};
+
 const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, iconColor }) => {
   // const { username = '', name = '' } = userInfo || {};
   //console.log('userInfo', userInfo);
   const lang = '';
   // const { lang } = useTranslation();
 
-  const listItem = list?.map((item) => {
-    return {
-      label: <Box align='center'>{item.label}</Box>,
-      onClick: item.onClick,
-      icon: (
-        <Box pad={{ right: 'small' }}>
-          <item.icon />
-        </Box>
-      ),
-    };
-  });
-
   return (
     <Header
-      background={background || 'white'}
       width='100%'
       flex={{ shrink: 0 }}
       direction='row'
       pad={{ horizontal: 'medium', vertical: 'xsmall' }}
-      border='bottom'
-      justify='start'
-      {...headerStyle}
-    ></Header>
+      justify='end'
+      style={{
+        position: 'absolute',
+        top: '20px',
+        right: '20px',
+        ...headerStyle,
+      }}
+    >
+      {Object.entries(head).map(([path, value]) => {
+        const active = Router.pathname === path;
+        return (
+          <Anchor
+            color={'#fff'}
+            href={path}
+            label={value.name}
+            style={{
+              padding: '10px',
+              borderRadius: '5px',
+              background: active ? '#0099FF' : 'transparent',
+            }}
+          ></Anchor>
+        );
+      })}
+    </Header>
   );
 };
 
