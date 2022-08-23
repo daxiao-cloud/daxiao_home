@@ -24,7 +24,12 @@ const withProjectPage = ({
 
     return (
       <Grommet full>
-        <Box width='100vw' height='100vh' justify='center'>
+        <Box
+          width='100vw'
+          height='100vh'
+          justify='center'
+          background={'linear-gradient(to bottom right, #00CCFF, #0033CC)'}
+        >
           {/* <Head headerStyle={head.style?.header} /> */}
           <Box
             width={{ max: '100vw', width: '1920px' }}

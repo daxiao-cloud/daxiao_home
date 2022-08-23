@@ -6,7 +6,7 @@ import { Button, Box } from 'grommet';
 import { Close } from 'grommet-icons';
 
 const Component = () => {
-  return <Box overflow={{ vertical: 'auto' }}>home</Box>;
+  return <Box>home</Box>;
 };
 
 const Page = withProjectPage({ Component });
