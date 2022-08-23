@@ -12,7 +12,7 @@ const JuJiuApp = ({ Component, pageProps }) => {
       </Head>
 
       <Component {...pageProps} />
-      <Script src='/js/opencv.js'></Script>
+      {/* <Script src='/js/opencv.js'></Script> */}
     </>
   );
 };

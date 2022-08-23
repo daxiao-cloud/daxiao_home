@@ -30,12 +30,14 @@ body {
   cursor: pointer;
 }
 
-
-
 p {
   margin: 0;
 }
 
 ul {
   border: none !important;
+}
+
+a {
+  box-shadow: none !important;
 }

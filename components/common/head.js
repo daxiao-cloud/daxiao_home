@@ -1,6 +1,6 @@
 import { Header, Anchor, Box, Paragraph, Drop, Button, Menu, Text } from 'grommet';
 import { User, Logout, Group, Cloud } from 'grommet-icons';
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 // import setLanguage from 'next-translate/setLanguage';
 // import useTranslation from 'next-translate/useTranslation';
 // import { SelectLanguageGrommet } from '../index';
@@ -29,6 +29,7 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
   //console.log('userInfo', userInfo);
   const lang = '';
   // const { lang } = useTranslation();
+  const router = useRouter();
 
   return (
     <Header
@@ -45,15 +46,24 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
       }}
     >
       {Object.entries(head).map(([path, value]) => {
-        const active = Router.pathname === path;
+        const active = router.pathname === path;
+        // const active = true;
+        // console.log(Router);
         return (
           <Anchor
+            key={path}
             color={'#fff'}
             href={path}
             label={value.name}
             style={{
-              padding: '10px',
-              borderRadius: '5px',
+              width: '100px',
+              height: '50px',
+              lineHeight: '50px',
+              padding: '0',
+              outline: 'none',
+              textDecoration: 'none !important',
+              borderRadius: '25px',
+              textAlign: 'center',
               background: active ? '#0099FF' : 'transparent',
             }}
           ></Anchor>
