@@ -39,9 +39,9 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
       pad={{ horizontal: 'medium', vertical: 'xsmall' }}
       justify='end'
       style={{
-        position: 'absolute',
-        top: '20px',
-        right: '20px',
+        // position: 'absolute',
+        // top: '20px',
+        // right: '20px',
         ...headerStyle,
       }}
     >

@@ -9,7 +9,7 @@ const Component = () => {
   return <Box>home</Box>;
 };
 
-const Page = withProjectPage({ Component });
+const Page = withProjectPage({ Component, background: 'linear-gradient(to bottom right, #00CCFF, #0033CC)' });
 
 const getServerSideProps = Page.makeGetServerSideProps();
 

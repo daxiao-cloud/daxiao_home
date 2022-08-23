@@ -14,6 +14,7 @@ const withProjectPage = ({
   Component = () => null,
   fnc = {},
   head = {},
+  background = 'linear-gradient(to bottom left, #00CCFF, #0033CC)',
 }) => {
   const PageComponent = ({ delegate, pageProps } = {}) => {
     const [noti, setNoti] = useState({ color: '', message: '', open: false });
@@ -24,16 +25,11 @@ const withProjectPage = ({
 
     return (
       <Grommet full>
-        <Box
-          width='100vw'
-          height='100vh'
-          justify='center'
-          background={'linear-gradient(to bottom right, #00CCFF, #0033CC)'}
-        >
+        <Box width='100vw' height='100vh' justify='center' background={background}>
           <Head headerStyle={head.style?.header} />
           <Box
-            width={{ max: '100vw', width: '1920px' }}
-            height={{ max: '100vh', height: '1080px' }}
+            width={{ max: '100vw', width: '100vw' }}
+            height={{ max: '100vh', height: '100vh' }}
             // flex={{ shrink: 1, grow: 1 }}
             alignSelf='center'
             overflow='auto'
