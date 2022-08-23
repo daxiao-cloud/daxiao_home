@@ -1,0 +1,24 @@
+{
+  "name": "daxiao_home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "babel.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": " next -p 10002"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grommet": "^2.25.1",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-pwa-manifest": "^4.3.0"
+  }
+}
