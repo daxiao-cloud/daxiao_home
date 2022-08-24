@@ -40,4 +40,6 @@ ul {
 
 a {
   box-shadow: none !important;
+  text-decoration: none !important;
+  outline: none !important;
 }
