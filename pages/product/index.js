@@ -14,21 +14,21 @@ const Component = () => {
       background={{
         image: 'url(https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/1t.png)',
         repeat: 'no-repeat',
-        position: 'center',
+        position: 'center ',
         size: 'cover',
       }}
     >
       {[
         {
           props: {
-            href: '/product/jlrh',
+            href: '/product/travel_integration',
             label: '交旅融合',
           },
           style: { transform: 'translate(-23vw, 3vw)' },
         },
         {
           props: {
-            href: '/product/zhny',
+            href: '/product/smart_agriculture',
             label: '智慧农业',
           },
           style: { transform: 'translate(23vw, -2vw)' },
