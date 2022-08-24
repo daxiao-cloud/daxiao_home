@@ -14,7 +14,6 @@ const Component = () => {
       <Box
         margin={{
           left: '5vw',
-          alginSelf: 'center',
         }}
         width={'31vw'}
         height={'20vw'}
