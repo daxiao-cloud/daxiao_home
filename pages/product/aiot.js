@@ -9,7 +9,7 @@ const Component = () => {
       justify='center'
       align='center'
       background={{
-        image: 'url(https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/3.png)',
+        image: 'url(https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/4.png)',
         repeat: 'no-repeat',
         position: 'center ',
         size: 'contain',

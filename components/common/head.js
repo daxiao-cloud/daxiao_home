@@ -9,18 +9,22 @@ import { sessionKey, tokenKey } from '../../data/cookie';
 const head = {
   '/about': {
     name: '公司介绍',
+    order: 1,
   },
-  '/product': {
-    name: '产品方案',
-  },
+  // '/product': {
+  //   name: '产品方案',
+  // },
   '/aiot': {
     name: '智能设备',
+    order: 3,
   },
   '/case': {
     name: '案例介绍',
+    order: 4,
   },
   '/backgroud': {
     name: '研发背景',
+    order: 5,
   },
 };
 
@@ -46,9 +50,11 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
       }}
     >
       {Object.entries(head).map(([path, value]) => {
+        // const active = router.pathname.split('/')[1] === path.replace('/', '');
         const active = router.pathname === path;
-        // const active = true;
+        // const active = true;1
         // console.log(Router);
+
         return (
           <Anchor
             key={path}
@@ -56,6 +62,7 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
             href={path}
             label={value.name}
             style={{
+              order: value.order,
               width: '100px',
               height: '50px',
               lineHeight: '50px',
@@ -69,6 +76,28 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
           ></Anchor>
         );
       })}
+      <Menu
+        icon={false}
+        dropBackground='#00CCFF'
+        label='产品方案'
+        color='#fff !important'
+        style={{
+          order: 2,
+          fontWeight: 600,
+          background: router.pathname.split('/')[1] === 'product' ? '#0099FF' : '',
+          borderRadius: '25px',
+          width: '100px',
+          height: '50px',
+          lineHeight: '50px',
+        }}
+        order={2}
+        items={[
+          { label: '介绍', color: '#fff', href: '/product' },
+          { label: '交旅融合', color: '#fff', href: '/product/travel_integration' },
+          { label: '智慧农业', color: '#fff', href: '/product/smart_agriculture' },
+          { label: 'AIoT Paas', color: '#fff', href: '/product/aiot' },
+        ]}
+      ></Menu>
     </Header>
   );
 };
