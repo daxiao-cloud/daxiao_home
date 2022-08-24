@@ -1,9 +1,6 @@
 import { withProjectPage } from '../components';
 
-import Router from 'next/router';
-import { useState, useCallback, useEffect, useRef } from 'react';
-import { Button, Box, Text, Heading } from 'grommet';
-import { Close } from 'grommet-icons';
+import { Button, Box, Text } from 'grommet';
 
 const titleStyle = {
   fontSize: '5vw',
