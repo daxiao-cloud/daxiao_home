@@ -2,15 +2,22 @@ import { withProjectPage } from '../components';
 
 import { Box, Text } from 'grommet';
 
+import { RadialSelected } from 'grommet-icons';
+
 const hlc = '#00CCFF';
 
 const fontStyle = {
   fontSize: '2vw',
   lineHeight: '5vw',
-  letterSpacing: '1px',
+  letterSpacing: '2px',
 };
 
-const ShowP = ({ children }) => <p style={fontStyle}>{children}</p>;
+const ShowP = ({ children }) => (
+  <Box direction='row' align='center' gap='10px'>
+    <RadialSelected size='large' color={hlc}></RadialSelected>
+    <p style={fontStyle}>{children}</p>
+  </Box>
+);
 
 const HighLightText = ({ children }) => (
   <Text
