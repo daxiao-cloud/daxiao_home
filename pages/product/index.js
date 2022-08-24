@@ -40,8 +40,9 @@ const Component = () => {
           },
           style: { transform: 'translate(0, 11.3vw)' },
         },
-      ].map(({ props, style }) => (
+      ].map(({ props, style }, i) => (
         <Anchor
+          key={i}
           color={'#fff'}
           {...props}
           style={{
