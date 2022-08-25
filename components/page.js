@@ -25,14 +25,14 @@ const withProjectPage = ({
 
     return (
       <Grommet full>
-        <Box width='100vw' height='100vh' justify='center' background={background}>
+        <Box width='100vw' height='100vh' justify='center' background={background} overflow='auto'>
           <Head headerStyle={head.style?.header} />
           <Box
-            width={{ max: '100vw', width: '100vw' }}
-            height={{ max: '100vh', height: '100vh' }}
-            // flex={{ shrink: 1, grow: 1 }}
+            // width={{ max: '100vw', width: '100vw' }}
+            // height={{ max: '100vh', height: '100vh' }}
+
+            flex={true}
             alignSelf='center'
-            overflow='auto'
             style={{ minWidth: '200px', boxSizing: 'border-box' }}
           >
             {/* {back && <NavBack />} */}
