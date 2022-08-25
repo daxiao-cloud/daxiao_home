@@ -30,7 +30,7 @@ const withProjectPage = ({
           <Box
             // width={{ max: '100vw', width: '100vw' }}
             // height={{ max: '100vh', height: '100vh' }}
-
+            width={'100%'}
             flex={true}
             alignSelf='center'
             style={{ minWidth: '200px', boxSizing: 'border-box' }}
