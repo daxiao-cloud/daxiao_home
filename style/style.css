@@ -43,3 +43,13 @@ a {
   text-decoration: none !important;
   outline: none !important;
 }
+
+.ShowPText {
+  position: relative;
+}
+
+.ShowPText::before {
+  position: absolute;
+  content: '•';
+  left: -1vw;
+}
