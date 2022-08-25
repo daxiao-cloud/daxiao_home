@@ -8,7 +8,12 @@ const JuJiuApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>DaXiao</title>
+        <title>大晓智能</title>
+        <link
+          rel='icon'
+          href='https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/logos.png'
+          type='image/png'
+        ></link>
       </Head>
 
       <Component {...pageProps} />
