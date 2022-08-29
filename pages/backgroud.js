@@ -2,8 +2,8 @@ import { withProjectPage } from '../components';
 
 import Router from 'next/router';
 import { useState, useCallback, useEffect, useRef } from 'react';
-import { Button, Box, Text } from 'grommet';
 import { Close } from 'grommet-icons';
+import { Button, Box, Text } from 'grommet';
 
 const hlc = '#1F4BD0';
 const fontStyle = { fontSize: '1.5vw', lineHeight: '2vw', letterSpacing: '2px' };
