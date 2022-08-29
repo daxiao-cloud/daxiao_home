@@ -1,10 +1,4 @@
-import { withProjectPage } from '../components';
-
-import Router from 'next/router';
-import { useState, useCallback, useEffect, useRef } from 'react';
-import { Close } from 'grommet-icons';
-
-import { Button, Box, Text, Paragraph } from 'grommet';
+import { Box } from 'grommet';
 const highLightColor = { color: '#00FFCC' };
 
 const TextStyle = {
@@ -15,9 +9,9 @@ const TextStyle = {
   letterSpacing: '1px',
 };
 
-const Component = () => {
+const About = () => {
   return (
-    <Box height={'100%'}>
+    <Box height={'100vh'}>
       <Box
         margin={{
           left: '5vw',
@@ -77,10 +71,4 @@ const Component = () => {
   );
 };
 
-const Page = withProjectPage({ Component });
-
-const getServerSideProps = Page.makeGetServerSideProps();
-
-export { getServerSideProps };
-
-export default Page;
+export { About };

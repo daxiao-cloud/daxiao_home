@@ -26,19 +26,9 @@ const withProjectPage = ({
     return (
       <Grommet full>
         <Box width='100vw' height='100vh' justify='center' background={background} overflow='auto'>
-          <Head headerStyle={head.style?.header} />
-          <Box
-            // width={{ max: '100vw', width: '100vw' }}
-            // height={{ max: '100vh', height: '100vh' }}
-            width={'100%'}
-            flex={true}
-            alignSelf='center'
-            style={{ minWidth: '200px', boxSizing: 'border-box' }}
-          >
-            {/* {back && <NavBack />} */}
-            <Component {...delegate} fnc={fnc} {...pageProps} />
-            <NotificationLayer {...noti}></NotificationLayer>
-          </Box>
+          {/* <Head headerStyle={head.style?.header} /> */}
+
+          <Component {...delegate} fnc={fnc} {...pageProps} />
         </Box>
       </Grommet>
     );

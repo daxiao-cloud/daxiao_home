@@ -1,8 +1,3 @@
-import { withProjectPage } from '../components';
-
-import Router from 'next/router';
-import { useState, useCallback, useEffect, useRef } from 'react';
-import { Close } from 'grommet-icons';
 import { Button, Box, Text } from 'grommet';
 
 const Video = ({ texts, name, img = '', videoStyle = {}, videoProps = {} }) => {
@@ -47,12 +42,12 @@ const Video = ({ texts, name, img = '', videoStyle = {}, videoProps = {} }) => {
   );
 };
 
-const Component = () => {
+const Case = () => {
   return (
     <Box flex={true} justify='around' gap='10px'>
       <Video
         videoStyle={{
-          width: '50vw',
+          width: '80vw',
         }}
         videoProps={{
           autoPlay: true,
@@ -88,11 +83,4 @@ const Component = () => {
     </Box>
   );
 };
-
-const Page = withProjectPage({ Component });
-
-const getServerSideProps = Page.makeGetServerSideProps();
-
-export { getServerSideProps };
-
-export default Page;
+export { Case };
