@@ -45,6 +45,7 @@ const Component = () => {
       <About></About>
       {['2', '3', '4'].map((name) => (
         <img
+          key={name}
           style={{
             width: '100%',
             objectFit: 'contain',

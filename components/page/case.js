@@ -14,7 +14,7 @@ const Video = ({ texts, name, img = '', videoStyle = {}, videoProps = {} }) => {
         }}
       >
         <video
-          preload={true}
+          preload='true'
           controls={true}
           src={`https://daxiaocloud.oss-accelerate.aliyuncs.com/home/video/${name}.mp4`}
           {...videoProps}
