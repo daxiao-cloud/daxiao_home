@@ -1,4 +1,5 @@
 import { Box } from 'grommet';
+import { PageStyle } from '../common/head';
 const highLightColor = { color: '#00FFCC' };
 
 const TextStyle = {
@@ -11,7 +12,7 @@ const TextStyle = {
 
 const About = () => {
   return (
-    <Box height={'100vh'}>
+    <Box style={PageStyle} id='about' height={'100vh'}>
       <Box
         margin={{
           left: '5vw',

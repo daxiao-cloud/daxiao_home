@@ -1,5 +1,5 @@
-import { withProjectPage, About, Aiot, Case, Background } from '../components';
-
+import { withProjectPage, About, Aiot, Case, Background, Contact } from '../components';
+import { PageStyle } from '../components/common/head';
 import { Grommet, Button, Box, Text } from 'grommet';
 
 const titleStyle = {
@@ -16,7 +16,7 @@ const Component = () => {
       overflow={{ vertical: 'scroll' }}
       background='linear-gradient(to bottom right, #00CCFF, #0033CC)'
     >
-      <Box height={'100vh'} justify='center'>
+      <Box id='main' style={PageStyle} height={'100vh'} justify='center'>
         <Box
           margin={{
             left: '5vw',
@@ -43,10 +43,16 @@ const Component = () => {
         </Box>
       </Box>
       <About></About>
-      {['2', '3', '4'].map((name) => (
+      {[
+        { name: '2', id: 'product_travel_integration' },
+        { name: '3', id: 'product_smart_agriculture' },
+        { name: '4', id: 'product_aiot' },
+      ].map(({ name, id }) => (
         <img
+          id={id}
           key={name}
           style={{
+            ...PageStyle,
             width: '100%',
             objectFit: 'contain',
           }}
@@ -56,6 +62,7 @@ const Component = () => {
       <Aiot></Aiot>
       <Case />
       <Background />
+      <Contact />
     </Grommet>
   );
 };
@@ -66,4 +73,4 @@ const getServerSideProps = Page.makeGetServerSideProps();
 
 export { getServerSideProps };
 
-export default Component;
+export default Page;

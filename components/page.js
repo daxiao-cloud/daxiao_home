@@ -3,6 +3,7 @@ import { Head, Login, NotificationLayer } from './index';
 import { LinkPrevious } from 'grommet-icons';
 import { Grommet, Box } from 'grommet';
 import Router from 'next/router';
+import { headHeight } from './common/head';
 
 // color: 'error',
 // message: '',
@@ -25,10 +26,17 @@ const withProjectPage = ({
 
     return (
       <Grommet full>
-        <Box width='100vw' height='100vh' justify='center' background={background} overflow='auto'>
-          {/* <Head headerStyle={head.style?.header} /> */}
-
-          <Component {...delegate} fnc={fnc} {...pageProps} />
+        <Box width='100vw' height='100vh' justify='center' background={background}>
+          <Head headerStyle={head.style?.header} />
+          <Box
+            style={{
+              paddingTop: headHeight,
+            }}
+            overflow='auto'
+            flex={true}
+          >
+            <Component {...delegate} fnc={fnc} {...pageProps} />
+          </Box>
         </Box>
       </Grommet>
     );

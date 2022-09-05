@@ -1,4 +1,5 @@
 import { Button, Box, Text } from 'grommet';
+import { PageStyle } from '../common/head';
 
 const Video = ({ texts, name, img = '', videoStyle = {}, videoProps = {} }) => {
   return (
@@ -44,7 +45,7 @@ const Video = ({ texts, name, img = '', videoStyle = {}, videoProps = {} }) => {
 
 const Case = () => {
   return (
-    <Box flex={true} justify='around' gap='10px'>
+    <Box id='case' style={PageStyle} flex={true} justify='around' gap='10px'>
       <Video
         videoStyle={{
           width: '80vw',

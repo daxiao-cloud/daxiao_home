@@ -1,5 +1,5 @@
 import { Box, Text } from 'grommet';
-
+import { PageStyle } from '../common/head';
 import { RadialSelected } from 'grommet-icons';
 
 const hlc = '#00CCFF';
@@ -30,7 +30,15 @@ const HighLightText = ({ children }) => (
 
 const Aiot = () => {
   return (
-    <Box flex={true} height='100vh' direction='row' align='center' justify='around'>
+    <Box
+      style={PageStyle}
+      id='aiot'
+      flex={true}
+      height='100vh'
+      direction='row'
+      align='center'
+      justify='around'
+    >
       <Box width='25vw'>
         <p
           style={{
@@ -80,7 +88,7 @@ const Aiot = () => {
       <Box>
         <Box height={'6vw'}>
           <img
-            src='https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/logo.png'
+            src='https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/logo.svg'
             style={{
               objectFit: 'contain',
               height: ' 100%',

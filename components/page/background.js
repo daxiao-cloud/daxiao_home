@@ -1,4 +1,5 @@
 import { Button, Box, Text } from 'grommet';
+import { PageStyle } from '../common/head';
 
 const hlc = '#1F4BD0';
 const fontStyle = { fontSize: '1.5vw', lineHeight: '2vw', letterSpacing: '2px' };
@@ -23,8 +24,8 @@ const ShowP = ({ children }) => (
 
 const Background = () => {
   return (
-    <Box height={'100vh'} justify='center'>
-      <Box direction='row' gap='10vw' alignSelf='center' height={'40vw'} margin={{ top: '2vw' }}>
+    <Box id='backgroud' style={PageStyle} height={'100%'} justify='center'>
+      <Box direction='row' gap='10vw' alignSelf='center' height={'40vw'}>
         <img
           style={{
             objectFit: 'contain',
