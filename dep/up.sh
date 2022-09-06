@@ -1,34 +1,21 @@
 
 
-dep/build.sh
 
-dep/deploy.sh
-path="/root/webrtc/app"
+path="/root/daxiaocloud/web/daxiao_home"
 
-ips=("139.224.228.200")
+ips=("47.102.86.37")
 
 for ip in ${ips[*]}
 do
 
-scp -i /c/work/jujiu/ssh/pem/jujiu.pem ./frontend.tar.gz root@${ip}:${path}
-scp ./frontend.tar.gz root@${ip}:${path}
 
-ssh -i /c/work/jujiu/ssh/pem/jujiu.pem root@${ip}  << deploy
+ssh -i /d/work/daxiaocloud/doc/ssh/daxiao.pem root@${ip}  << deploy
 
 cd ${path}
-
-# rm -rf ./frontend
-tar -xzvf frontend.tar.gz
-
-chown -R  root frontend
-chgrp -R  root frontend
-
-cd frontend
-
-pm2 delete pm2.json5
-rm package-lock.json
-npm i --legacy-peer-deps
-pm2 start pm2.json5
+git pull
+npm i
+bash dep/build.sh
+bash dep/restart.sh
 
 exit
 deploy
@@ -36,4 +23,4 @@ deploy
 done
 
 
-dep/flush.sh
+# dep/flush.sh
