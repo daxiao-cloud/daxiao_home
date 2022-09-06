@@ -60,7 +60,7 @@ const Contact = () => {
       </Box>
       <Box gap='medium' width={'100%'} justify='around'>
         <Anchor
-          href='https://surl.amap.com/34Si3101tgxd'
+          href='https://surl.amap.com/3RWlpkqbKs'
           label='地址：上海虹桥国际中央商务区申昆路2377号虹桥国际展汇1幢3楼'
           color='#fff'
           target={'_blank'}
