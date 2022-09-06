@@ -136,8 +136,8 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
               { label: '交旅融合', color: '#fff', href: '#product_travel_integration' },
               { label: '智慧农业', color: '#fff', href: '#product_smart_agriculture' },
               { label: 'AIoT Paas', color: '#fff', href: '#product_aiot' },
-            ].map((props) => (
-              <Anchor {...props}></Anchor>
+            ].map((props, i) => (
+              <Anchor key={i} {...props}></Anchor>
             ))}
           </Box>
         }
