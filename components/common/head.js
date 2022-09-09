@@ -174,4 +174,4 @@ const HeadBox = () => <Box height={height} flex={{ shrink: 0 }}></Box>;
 
 const PageStyle = {};
 
-export { Head, height as headHeight };
+export { Head, height as headHeight, PageStyle };
