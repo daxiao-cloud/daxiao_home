@@ -1,4 +1,5 @@
 import { Anchor, Box, Text } from 'grommet';
+import { Location, Mail } from 'grommet-icons';
 // import AMapLoader from '@amap/amap-jsapi-loader';
 import { useEffect } from 'react';
 const loadMap = async () => {
@@ -59,13 +60,25 @@ const Contact = () => {
         ></img>
       </Box>
       <Box gap='medium' width={'100%'} justify='around'>
-        <Anchor
-          href='https://surl.amap.com/3RWlpkqbKs'
-          label='地址：上海虹桥国际中央商务区申昆路2377号虹桥国际展汇1幢3楼'
-          color='#fff'
-          target={'_blank'}
-        ></Anchor>
-        <Text color='#fff'>邮箱：yunasha@daxiaogroup.com </Text>
+        <Box direction='row' gap='small' align='center'>
+          <Location color='#00FFCC' />
+          <Box gap='xxsmall'>
+            <Anchor
+              href='https://surl.amap.com/3RWlpkqbKs'
+              label='上海虹桥国际中央商务区虹桥国际展汇1幢3楼'
+              color='#fff'
+              target={'_blank'}
+            ></Anchor>
+
+            <Text color={'#fff'} size='small'>
+              上海市闵行区申昆路2377号
+            </Text>
+          </Box>
+        </Box>
+        <Box direction='row' gap='small' align='center'>
+          <Mail color='#00FFCC' />
+          <Text color='#fff'>邮箱：yunasha@daxiaogroup.com </Text>
+        </Box>
       </Box>
     </Box>
   );
