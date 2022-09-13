@@ -22,7 +22,7 @@ const loadMap = async () => {
 };
 const Contact = () => {
   useEffect(() => {
-    loadMap();
+    //loadMap();
   }, []);
 
   return (
@@ -49,15 +49,17 @@ const Contact = () => {
         科技服务美好生活
       </Text>
       <Box width={'100%'} direction='row' justify='between'>
-        <Box id='container' flex={{ shrink: 1 }} width={'40vw'}></Box>
-        <img
-          src='https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/scape.jpg'
-          style={{
-            width: '40vw',
-            flex: '0 1 auto',
-            objectFit: 'cover',
-          }}
-        ></img>
+        {/* <Box id='container' flex={{ shrink: 1 }} width={'40vw'}></Box> */}
+        {['work1.png', 'scape.jpg'].map((name) => (
+          <img
+            src={`https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/${name}`}
+            style={{
+              width: '40vw',
+              flex: '0 1 auto',
+              objectFit: 'cover',
+            }}
+          ></img>
+        ))}
       </Box>
       <Box gap='medium' width={'100%'} justify='around'>
         <Box direction='row' gap='small' align='center'>

@@ -16,26 +16,23 @@ const Component = () => {
       overflow={{ vertical: 'scroll' }}
       background='linear-gradient(to bottom right, #00CCFF, #0033CC)'
     >
-      <Box id='main' style={PageStyle} height={'100vh'} justify='center'>
+      <Box id='main' align='center' style={PageStyle} height={'100vh'} justify='center'>
         <Box
           margin={{
             left: '5vw',
           }}
-          width={'31vw'}
-          height={'20vw'}
+          width={'62vw'}
+          height={'auto'}
         >
           <Box flex={true} style={titleStyle}>
-            上海大晓智能
-          </Box>
-          <Box flex={true} style={titleStyle}>
-            科技有限公司
+            上海大晓智能科技有限公司
           </Box>
           <Box margin={'1.5vw 0'} background={'#fff'} height='1px' width={'auto'}></Box>
           <Box
             style={{
               fontSize: '1.5vw',
               lineHeight: '1.5vw',
-              color: '#fff',
+              color: '#00FFCC',
             }}
           >
             科技服务美好生活
@@ -60,7 +57,7 @@ const Component = () => {
         ></img>
       ))}
       <Aiot></Aiot>
-      <Case />
+      {/* <Case /> */}
       <Background />
       <Contact />
     </Grommet>

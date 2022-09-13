@@ -25,10 +25,10 @@ const head = {
     name: '智能设备',
     order: 13,
   },
-  '#case': {
-    name: '案例介绍',
-    order: 14,
-  },
+  // '#case': {
+  //   name: '案例介绍',
+  //   order: 14,
+  // },
   '#backgroud': {
     name: '我们的团队',
     order: 15,
@@ -113,8 +113,8 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
         style={{
           order: 5,
           fontWeight: 600,
-          background: router.pathname.split('/')[1] === 'product' ? '#0099FF' : '',
           height: '50px',
+          // background: router.pathname.split('#').pop === 'product' ? '#0099FF' : '',
         }}
         onClose={() => setOpen(false)}
         dropProps={{
