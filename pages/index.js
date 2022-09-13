@@ -18,9 +18,9 @@ const Component = () => {
     >
       <Box id='main' align='center' style={PageStyle} height={'100vh'} justify='center'>
         <Box
-          margin={{
-            left: '5vw',
-          }}
+          // margin={{
+          //   left: '5vw',
+          // }}
           width={'62vw'}
           height={'auto'}
         >
@@ -30,9 +30,10 @@ const Component = () => {
           <Box margin={'1.5vw 0'} background={'#fff'} height='1px' width={'auto'}></Box>
           <Box
             style={{
-              fontSize: '1.5vw',
-              lineHeight: '1.5vw',
+              fontSize: '2vw',
+              lineHeight: '2vw',
               color: '#00FFCC',
+              textAlign: 'center',
             }}
           >
             科技服务美好生活

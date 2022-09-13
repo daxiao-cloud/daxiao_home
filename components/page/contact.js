@@ -52,6 +52,7 @@ const Contact = () => {
         {/* <Box id='container' flex={{ shrink: 1 }} width={'40vw'}></Box> */}
         {['work1.png', 'scape.jpg'].map((name) => (
           <img
+            key={name}
             src={`https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/${name}`}
             style={{
               width: '40vw',

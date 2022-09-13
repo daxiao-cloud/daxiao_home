@@ -81,7 +81,7 @@ const Aiot = () => {
               textAlign: 'center',
             }}
           >
-            大晓金乌1号
+            大晓金乌系列
           </p>
         </Box>
       </Box>

@@ -30,7 +30,7 @@ const head = {
   //   order: 14,
   // },
   '#backgroud': {
-    name: '我们的团队',
+    name: '创新引领',
     order: 15,
   },
   '#contact': {
