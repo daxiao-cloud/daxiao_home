@@ -45,6 +45,7 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
   const lang = '';
   // const { lang } = useTranslation();
   const router = useRouter();
+  const [tid, setTid] = useState();
 
   const [open, setOpen] = useState(false);
 
@@ -140,9 +141,11 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
               <Anchor
                 key={i}
                 onClick={() => {
-                  setTimeout(() => {
+                  tid && clearTimeout(tid);
+                  const id = setTimeout(() => {
                     setOpen(false);
                   }, 1500);
+                  setTid(id);
                 }}
                 {...props}
               ></Anchor>

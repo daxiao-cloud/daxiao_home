@@ -1,6 +1,8 @@
-import { withProjectPage, About, Aiot, Case, Background, Contact } from '../components';
+import { withProjectPage, About, Aiot, Case, Background, Contact, Product } from '../components';
 import { PageStyle } from '../components/common/head';
 import { Grommet, Button, Box, Text } from 'grommet';
+
+const highColor = '#00FFCC';
 
 const titleStyle = {
   fontSize: '5vw',
@@ -32,7 +34,7 @@ const Component = () => {
             style={{
               fontSize: '2vw',
               lineHeight: '2vw',
-              color: '#00FFCC',
+              color: highColor,
               textAlign: 'center',
             }}
           >
@@ -41,8 +43,8 @@ const Component = () => {
         </Box>
       </Box>
       <About></About>
+      <Product />
       {[
-        { name: '2', id: 'product_travel_integration' },
         { name: '3', id: 'product_smart_agriculture' },
         { name: '4', id: 'product_aiot' },
       ].map(({ name, id }) => (
@@ -50,7 +52,6 @@ const Component = () => {
           id={id}
           key={name}
           style={{
-            ...PageStyle,
             width: '100%',
             objectFit: 'contain',
           }}
