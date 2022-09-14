@@ -137,7 +137,15 @@ const Head = ({ list = [], background, headerStyle = {}, href, iconBackground, i
               { label: '智慧农业', color: '#fff', href: '#product_smart_agriculture' },
               { label: 'AIoT Paas', color: '#fff', href: '#product_aiot' },
             ].map((props, i) => (
-              <Anchor key={i} {...props}></Anchor>
+              <Anchor
+                key={i}
+                onClick={() => {
+                  setTimeout(() => {
+                    setOpen(false);
+                  }, 1500);
+                }}
+                {...props}
+              ></Anchor>
             ))}
           </Box>
         }

@@ -1,0 +1,3 @@
+const HomeTable = () => {};
+
+export { HomeTable };
