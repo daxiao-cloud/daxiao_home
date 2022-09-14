@@ -13,7 +13,7 @@ const ShowP = ({ children }) => (
     className='ShowPText'
     style={{
       ...fontStyle,
-      width: '17vw',
+      width: '40vw',
       textAlign: 'justify',
       whiteSpace: 'pre-wrap',
     }}
@@ -25,7 +25,16 @@ const ShowP = ({ children }) => (
 const Background = () => {
   return (
     <Box id='backgroud' style={PageStyle} height={'100%'} justify='center'>
-      <Box direction='row' gap='10vw' alignSelf='center' height={'40vw'}>
+      <Box
+        direction='row'
+        gap='10vw'
+        alignSelf='center'
+        justify='center'
+        height={{
+          height: '80vh',
+          min: '40vw',
+        }}
+      >
         <img
           style={{
             objectFit: 'contain',
@@ -33,7 +42,7 @@ const Background = () => {
           src='https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/jim2.jpg'
         ></img>
         <Box
-          width={'30vw'}
+          width={'50vw'}
           background={'#fff'}
           align='center'
           pad='3vw'
@@ -61,6 +70,7 @@ const Background = () => {
           <ShowP>
             曾任百度云智能物联网 <HighLightText>核心产品发起人、研发 负责人</HighLightText>
           </ShowP>
+          <Box></Box>
           <ShowP>
             曾任Microsoft (微软) 亚洲工程院 - <HighLightText>软件架构师</HighLightText>
           </ShowP>

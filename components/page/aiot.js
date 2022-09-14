@@ -86,7 +86,7 @@ const Aiot = () => {
         </Box>
       </Box>
       <Box>
-        <Box height={'6vw'}>
+        {/* <Box height={'6vw'}>
           <img
             src='https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/logo.svg'
             style={{
@@ -95,7 +95,7 @@ const Aiot = () => {
               alignSelf: 'end',
             }}
           ></img>
-        </Box>
+        </Box> */}
         <Box>
           <ShowP>
             高达 3K（<HighLightText>3200×1800</HighLightText>）的视频分辨率。
