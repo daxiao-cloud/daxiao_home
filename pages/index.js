@@ -44,20 +44,7 @@ const Component = () => {
       </Box>
       <About></About>
       <Product />
-      {[
-        { name: '3', id: 'product_smart_agriculture' },
-        { name: '4', id: 'product_aiot' },
-      ].map(({ name, id }) => (
-        <img
-          id={id}
-          key={name}
-          style={{
-            width: '100%',
-            objectFit: 'contain',
-          }}
-          src={`https://daxiaocloud.oss-accelerate.aliyuncs.com/home/images/${name}.png`}
-        ></img>
-      ))}
+
       <Aiot></Aiot>
       {/* <Case /> */}
       <Background />
