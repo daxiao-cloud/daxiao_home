@@ -42,10 +42,10 @@ const TitleTextBox = ({ title = '', texts = [] }) => {
   );
 };
 
-const makeTilte = ({ title } = {}) => {
+const makeTilte = ({ title, area = 'title' } = {}) => {
   const list = Array.isArray(title) ? title : [title];
   return {
-    area: 'title',
+    area,
     background: highColor,
     gap: '1vw',
     children: list.map((text) => (
@@ -61,34 +61,34 @@ const smartApp = {
   style: {
     borderBottom: '2px solid #0099FF',
   },
-  columns: [titleWidth, 'repeat(4,auto)'],
-  areas: [
-    { name: 'title', start: [0, 0], end: [0, 0] },
-    { name: 'manage', start: [1, 0], end: [1, 0] },
-    { name: 'traffic', start: [2, 0], end: [2, 0] },
-    { name: 'experience', start: [3, 0], end: [3, 0] },
-    { name: 'Integrate', start: [4, 0], end: [4, 0] },
-  ],
+  columns: [titleWidth, 'repeat(4,1fr)'],
+  // areas: [
+  //   { name: 'title', start: [0, 0], end: [0, 0] },
+  //   { name: 'manage', start: [1, 0], end: [1, 0] },
+  //   { name: 'traffic', start: [2, 0], end: [2, 0] },
+  //   { name: 'experience', start: [3, 0], end: [3, 0] },
+  //   { name: 'Integrate', start: [4, 0], end: [4, 0] },
+  // ],
   areaList: [
-    makeTilte({ title: '智能应用层' }),
+    makeTilte({ title: '智能应用层', area: '1/1' }),
     ...[
       {
-        area: 'manage',
+        area: '1/2',
         title: '智慧管理服务',
         texts: ['指挥调度 | AI慧眼', '无人环卫 | 智慧公厕'],
       },
       {
-        area: 'traffic',
+        area: '1/3',
         title: '畅行交通',
         texts: ['智能导航 | 智能停车', '自动驾驶服务 | 约车服务'],
       },
       {
-        area: 'experience',
+        area: '1/4',
         title: '沉浸体验',
         texts: ['人机交互 | 数字伴游', '虚拟导游（AR/VR） '],
       },
       {
-        area: 'Integrate',
+        area: '1/5',
         title: '整合营销',
         texts: ['游客画像 | 产品分销', '精准推送'],
       },
@@ -106,7 +106,7 @@ const engine = {
     borderBottom: '2px solid #0099FF',
   },
   rows: ['4vw', '4vw'],
-  columns: [titleWidth, 'repeat(3,auto)'],
+  columns: [titleWidth, 'repeat(3,1fr)'],
   areas: [
     {
       name: 'title',
@@ -182,7 +182,7 @@ const engine = {
 
 const facility = {
   rows: ['4vw', '3vw', '3vw', '3vw'],
-  columns: [titleWidth, 'repeat(4,auto)'],
+  columns: [titleWidth, 'repeat(4,1fr)'],
   areas: [
     { name: 'title', start: [0, 0], end: [0, 3] },
     { name: 'aiot', start: [1, 0], end: [1, 0] },
@@ -264,7 +264,7 @@ const agricultureList = [
     style: {
       borderBottom: '2px solid #0099FF',
     },
-    columns: [titleWidth, 'repeat(5,auto)'],
+    columns: [titleWidth, 'repeat(5,1fr)'],
     areas: [
       { name: 'title', start: [0, 0], end: [0, 0] },
       { name: 't1', start: [1, 0], end: [1, 0] },
@@ -308,7 +308,7 @@ const agricultureList = [
   engine,
   {
     rows: ['4vw', '3vw', '3vw', '3vw'],
-    columns: [titleWidth, 'repeat(4,auto)'],
+    columns: [titleWidth, 'repeat(4,1fr)'],
     areas: [
       { name: 'title', start: [0, 0], end: [0, 3] },
       { name: 'aiot', start: [1, 0], end: [1, 0] },
@@ -391,7 +391,7 @@ const aiotList = [
     style: {
       borderBottom: '2px solid #0099FF',
     },
-    columns: [titleWidth, 'repeat(2,auto)'],
+    columns: [titleWidth, 'repeat(2,1fr)'],
     areas: [
       { name: 'title', start: [0, 0], end: [0, 0] },
       { name: 'travel_integration', start: [1, 0], end: [1, 0] },
@@ -419,7 +419,7 @@ const aiotList = [
   },
   {
     rows: ['3vw', '3vw', '3vw'],
-    columns: [titleWidth, 'repeat(3,auto)'],
+    columns: [titleWidth, 'repeat(3,1fr)'],
     areas: [
       { name: 'title', start: [0, 0], end: [0, 2] },
       { name: 'va', start: [1, 0], end: [1, 0] },
@@ -466,7 +466,7 @@ const aiotList = [
   },
   {
     rows: ['10vw'],
-    columns: [titleWidth, 'repeat(3,auto)'],
+    columns: [titleWidth, 'repeat(3,1fr)'],
     areas: [
       { name: 'title', start: [0, 0], end: [0, 0] },
       { name: 'aicenter', start: [1, 0], end: [1, 0] },
