@@ -42,7 +42,7 @@ const TitleTextBox = ({ title = '', texts = [] }) => {
   );
 };
 
-const makeTilte = ({ title, area = 'title' } = {}) => {
+const makeTilte = ({ title, area = '1/1' } = {}) => {
   const list = Array.isArray(title) ? title : [title];
   return {
     area,
@@ -62,13 +62,6 @@ const smartApp = {
     borderBottom: '2px solid #0099FF',
   },
   columns: [titleWidth, 'repeat(4,1fr)'],
-  // areas: [
-  //   { name: 'title', start: [0, 0], end: [0, 0] },
-  //   { name: 'manage', start: [1, 0], end: [1, 0] },
-  //   { name: 'traffic', start: [2, 0], end: [2, 0] },
-  //   { name: 'experience', start: [3, 0], end: [3, 0] },
-  //   { name: 'Integrate', start: [4, 0], end: [4, 0] },
-  // ],
   areaList: [
     makeTilte({ title: '智能应用层', area: '1/1' }),
     ...[
@@ -107,68 +100,32 @@ const engine = {
   },
   rows: ['4vw', '4vw'],
   columns: [titleWidth, 'repeat(3,1fr)'],
-  areas: [
-    {
-      name: 'title',
-      start: [0, 0],
-      end: [0, 1],
-    },
-    {
-      name: 'va',
-      start: [1, 0],
-      end: [1, 0],
-    },
-    {
-      name: 'mv',
-      start: [2, 0],
-      end: [2, 0],
-    },
-    {
-      name: 'billing',
-      start: [3, 0],
-      end: [3, 0],
-    },
-    {
-      name: 'mqtt',
-      start: [1, 1],
-      end: [1, 1],
-    },
-    {
-      name: 'lbs',
-      start: [2, 1],
-      end: [2, 1],
-    },
-    {
-      name: 'tsdb',
-      start: [3, 1],
-      end: [3, 1],
-    },
-  ],
   areaList: [
-    makeTilte({ title: '智能引擎层' }),
+    makeTilte({ title: '智能引擎层', area: '1/1/3/2' }),
     ...[
       {
-        area: 'va',
+        area: '1/2',
         title: '音视频传输',
       },
       {
-        area: 'mv',
+        area: '1/3',
         title: '机器视觉',
       },
       {
-        area: 'billing',
+        area: '1/4',
+
         title: 'Billing',
       },
       {
-        area: 'mqtt',
+        area: '2/2',
         title: 'MQTT（接入）',
       },
       {
-        area: 'lbs',
+        area: '2/3',
         title: 'LBS（位置）',
       },
       {
-        area: 'tsdb',
+        area: '2/4',
         title: 'TSDB（存储）',
       },
     ].map(({ area, title }) => ({
@@ -183,42 +140,24 @@ const engine = {
 const facility = {
   rows: ['4vw', '3vw', '3vw', '3vw'],
   columns: [titleWidth, 'repeat(4,1fr)'],
-  areas: [
-    { name: 'title', start: [0, 0], end: [0, 3] },
-    { name: 'aiot', start: [1, 0], end: [1, 0] },
-    { name: 'aiotv', start: [1, 1], end: [1, 1] },
-    { name: 'aisensor', start: [1, 2], end: [1, 2] },
-    { name: 'aicar', start: [1, 3], end: [1, 3] },
-    { name: 'aicenter', start: [2, 0], end: [2, 0] },
-    { name: 'ai', start: [2, 1], end: [2, 1] },
-    { name: 'bigdata', start: [2, 2], end: [2, 2] },
-    { name: 'safety', start: [2, 3], end: [2, 3] },
-    { name: 'aimap', start: [3, 0], end: [3, 0] },
-    { name: 'navmap', start: [3, 1], end: [3, 1] },
-    { name: 'hdmap', start: [3, 2], end: [3, 2] },
-    { name: 'handmap', start: [3, 3], end: [3, 3] },
-    { name: 'aicloud', start: [4, 0], end: [4, 0] },
-    { name: 'arvr', start: [4, 1], end: [4, 1] },
-    { name: 'car', start: [4, 2], end: [4, 2] },
-    { name: 'outside', start: [4, 3], end: [4, 3] },
-  ],
+
   areaList: [
-    makeTilte({ title: '基础设施层' }),
+    makeTilte({ title: '基础设施层', area: '1/1/5/2' }),
     ...[
       {
-        area: 'aiot',
+        area: '1/2',
         title: '智能设备',
       },
       {
-        area: 'aicenter',
+        area: '1/3',
         title: '智能算力中心',
       },
       {
-        area: 'aimap',
+        area: '1/4',
         title: '智能地图',
       },
       {
-        area: 'aicloud',
+        area: '1/5',
         title: '智能终端',
       },
     ].map(({ area, title }) => ({
@@ -228,12 +167,12 @@ const facility = {
       style: titleFontStyle,
     })),
     ...[
-      { area: 'aiotv', children: '智能视觉设备' },
-      { area: 'aisensor', children: '智能传感器' },
-      { area: 'aicar', children: '自动驾驶汽车' },
-      { area: 'navmap', children: '导航地图' },
-      { area: 'hdmap', children: '高清地图' },
-      { area: 'handmap', children: '手绘地图' },
+      { area: '2/2', children: '智能视觉设备' },
+      { area: '3/2', children: '智能传感器' },
+      { area: '4/2', children: '自动驾驶汽车' },
+      { area: '2/4', children: '导航地图' },
+      { area: '3/4', children: '高清地图' },
+      { area: '4/4', children: '手绘地图' },
     ].map((data) => ({
       ...data,
       background: '#66CCCC',
@@ -242,12 +181,12 @@ const facility = {
       },
     })),
     ...[
-      { area: 'ai', children: 'AI计算' },
-      { area: 'bigdata', children: '大数据计算存储' },
-      { area: 'safety', children: '安全防护' },
-      { area: 'arvr', children: 'AR/VR设备' },
-      { area: 'car', children: '车载交互屏' },
-      { area: 'outside', children: '室外交互屏' },
+      { area: '2/3', children: 'AI计算' },
+      { area: '3/3', children: '大数据计算存储' },
+      { area: '4/3', children: '安全防护' },
+      { area: '2/5', children: 'AR/VR设备' },
+      { area: '3/5', children: '车载交互屏' },
+      { area: '4/5', children: '室外交互屏' },
     ].map((data) => ({
       ...data,
       background: '#CC9933',
@@ -265,35 +204,28 @@ const agricultureList = [
       borderBottom: '2px solid #0099FF',
     },
     columns: [titleWidth, 'repeat(5,1fr)'],
-    areas: [
-      { name: 'title', start: [0, 0], end: [0, 0] },
-      { name: 't1', start: [1, 0], end: [1, 0] },
-      { name: 't2', start: [2, 0], end: [2, 0] },
-      { name: 't3', start: [3, 0], end: [3, 0] },
-      { name: 't4', start: [4, 0], end: [4, 0] },
-      { name: 't5', start: [5, 0], end: [5, 0] },
-    ],
+
     areaList: [
       makeTilte({ title: '智能应用层' }),
       ...[
         {
-          area: 't1',
+          area: '1/2',
           texts: ['种植/养殖', '监控与管理'],
         },
         {
-          area: 't2',
+          area: '1/3',
           texts: ['场地/机械', '监测与运行'],
         },
         {
-          area: 't3',
+          area: '1/4',
           texts: ['产品品质', '跟踪与监测'],
         },
         {
-          area: 't4',
+          area: '1/5',
           texts: ['科技文旅', '融合与创新'],
         },
         {
-          area: 't5',
+          area: '1/6',
           texts: ['线上/线下', '沉浸式体验'],
         },
       ].map(({ area, texts }) => ({
@@ -309,42 +241,23 @@ const agricultureList = [
   {
     rows: ['4vw', '3vw', '3vw', '3vw'],
     columns: [titleWidth, 'repeat(4,1fr)'],
-    areas: [
-      { name: 'title', start: [0, 0], end: [0, 3] },
-      { name: 'aiot', start: [1, 0], end: [1, 0] },
-      { name: 'aiotv', start: [1, 1], end: [1, 1] },
-      { name: 'aisensor', start: [1, 2], end: [1, 2] },
-      { name: 'ainj', start: [1, 3], end: [1, 3] },
-      { name: 'aicenter', start: [2, 0], end: [2, 0] },
-      { name: 'ai', start: [2, 1], end: [2, 1] },
-      { name: 'bigdata', start: [2, 2], end: [2, 2] },
-      { name: 'safety', start: [2, 3], end: [2, 3] },
-      { name: 'aimap', start: [3, 0], end: [3, 0] },
-      { name: 'navmap', start: [3, 1], end: [3, 1] },
-      { name: 'hdmap', start: [3, 2], end: [3, 2] },
-      { name: 'handmap', start: [3, 3], end: [3, 3] },
-      { name: 'Telecommunication', start: [4, 0], end: [4, 0] },
-      { name: '5g', start: [4, 1], end: [4, 1] },
-      { name: 'zw', start: [4, 2], end: [4, 2] },
-      { name: 'nb', start: [4, 3], end: [4, 3] },
-    ],
     areaList: [
-      makeTilte({ title: '基础设施层' }),
+      makeTilte({ title: '基础设施层', area: '1/1/5/2' }),
       ...[
         {
-          area: 'aiot',
+          area: '1/2',
           title: '智能设备',
         },
         {
-          area: 'aicenter',
+          area: '1/3',
           title: '智能算力中心',
         },
         {
-          area: 'aimap',
+          area: '1/4',
           title: '智能地图',
         },
         {
-          area: 'Telecommunication',
+          area: '1/5',
           title: '网络通信',
         },
       ].map(({ area, title }) => ({
@@ -354,12 +267,12 @@ const agricultureList = [
         style: titleFontStyle,
       })),
       ...[
-        { area: 'aiotv', children: '智能视觉设备' },
-        { area: 'aisensor', children: '智能传感器' },
-        { area: 'ainj', children: '智能农机化' },
-        { area: 'navmap', children: '导航地图' },
-        { area: 'hdmap', children: '高清地图' },
-        { area: 'handmap', children: '手绘地图' },
+        { area: '2/2', children: '智能视觉设备' },
+        { area: '3/2', children: '智能传感器' },
+        { area: '4/2', children: '智能农机化' },
+        { area: '2/4', children: '导航地图' },
+        { area: '3/4', children: '高清地图' },
+        { area: '4/4', children: '手绘地图' },
       ].map((data) => ({
         ...data,
         background: '#66CCCC',
@@ -368,12 +281,12 @@ const agricultureList = [
         },
       })),
       ...[
-        { area: 'ai', children: 'AI计算' },
-        { area: 'bigdata', children: '大数据计算存储' },
-        { area: 'safety', children: '安全防护' },
-        { area: '5g', children: '5G/4G网络' },
-        { area: 'zw', children: '专线网络' },
-        { area: 'nb', children: 'NBLora…' },
+        { area: '2/3', children: 'AI计算' },
+        { area: '3/3', children: '大数据计算存储' },
+        { area: '4/3', children: '安全防护' },
+        { area: '2/5', children: '5G/4G网络' },
+        { area: '3/5', children: '专线网络' },
+        { area: '4/5', children: 'NBLora…' },
       ].map((data) => ({
         ...data,
         background: '#CC9933',
@@ -392,20 +305,16 @@ const aiotList = [
       borderBottom: '2px solid #0099FF',
     },
     columns: [titleWidth, 'repeat(2,1fr)'],
-    areas: [
-      { name: 'title', start: [0, 0], end: [0, 0] },
-      { name: 'travel_integration', start: [1, 0], end: [1, 0] },
-      { name: 'smart_agriculture', start: [2, 0], end: [2, 0] },
-    ],
+
     areaList: [
       makeTilte({ title: '产品方案' }),
       ...[
         {
-          area: 'travel_integration',
+          area: '1/2',
           children: '交旅融合',
         },
         {
-          area: 'smart_agriculture',
+          area: '1/3',
           children: '智慧农业',
         },
       ].map(({ area, children }) => ({
@@ -423,27 +332,15 @@ const aiotList = [
     },
     rows: ['3vw', '3vw', '3vw'],
     columns: [titleWidth, 'repeat(3,1fr)'],
-    areas: [
-      { name: 'title', start: [0, 0], end: [0, 2] },
-      { name: 'va', start: [1, 0], end: [1, 0] },
-      { name: 'mqtt', start: [1, 1], end: [1, 1] },
-      { name: 'webipc', start: [1, 2], end: [1, 2] },
-      { name: 'mv', start: [2, 0], end: [2, 0] },
-      { name: 'lbs', start: [2, 1], end: [2, 1] },
-      { name: 'aitem', start: [2, 2], end: [2, 2] },
-      { name: 'billing', start: [4, 0], end: [4, 0] },
-      { name: 'tsdb', start: [3, 1], end: [3, 1] },
-      { name: 'aipepole', start: [3, 2], end: [3, 2] },
-    ],
     areaList: [
-      makeTilte({ title: ['AIoT PaaS', '平台'] }),
+      makeTilte({ title: ['AIoT PaaS', '平台'], area: '1/1/4/2' }),
       ...[
-        { area: 'va', children: '音视频传输' },
-        { area: 'billing', children: 'Billing' },
-        { area: 'mqtt', children: 'MQTT（接入）' },
-        { area: 'tsdb', children: 'TSDB（存储）' },
-        { area: 'webipc', children: '金乌Web IPC ' },
-        { area: 'aipepole', children: '智能机器人' },
+        { area: '1/2', children: '音视频传输' },
+        { area: '1/4', children: 'Billing' },
+        { area: '2/2', children: 'MQTT（接入）' },
+        { area: '2/4', children: 'TSDB（存储）' },
+        { area: '3/2', children: '金乌Web IPC ' },
+        { area: '3/4', children: '智能机器人' },
       ].map((data) => ({
         ...data,
         background: '#66CCCC',
@@ -454,9 +351,9 @@ const aiotList = [
         },
       })),
       ...[
-        { area: 'mv', children: '机器视觉' },
-        { area: 'lbs', children: 'LBS（位置）' },
-        { area: 'aitem', children: '智能感知终端' },
+        { area: '1/3', children: '机器视觉' },
+        { area: '2/3', children: 'LBS（位置）' },
+        { area: '3/3', children: '智能感知终端' },
       ].map((data) => ({
         ...data,
         background: '#CC9933',
@@ -470,25 +367,20 @@ const aiotList = [
   {
     rows: ['10vw'],
     columns: [titleWidth, 'repeat(3,1fr)'],
-    areas: [
-      { name: 'title', start: [0, 0], end: [0, 0] },
-      { name: 'aicenter', start: [1, 0], end: [1, 0] },
-      { name: 'net', start: [2, 0], end: [2, 0] },
-      { name: 'more', start: [3, 0], end: [3, 0] },
-    ],
+
     areaList: [
       makeTilte({ title: '基础设备' }),
       ...[
         {
-          area: 'aicenter',
+          area: '1/2',
           children: '智能算力中心',
         },
         {
-          area: 'net',
+          area: '1/3',
           children: '网络通信',
         },
         {
-          area: 'more',
+          area: '1/4',
           children: '......',
         },
       ].map(({ area, children }) => ({
