@@ -418,6 +418,9 @@ const aiotList = [
     ],
   },
   {
+    style: {
+      borderBottom: '2px solid #0099FF',
+    },
     rows: ['3vw', '3vw', '3vw'],
     columns: [titleWidth, 'repeat(3,auto)'],
     areas: [
