@@ -68,7 +68,7 @@ const Background = () => {
             大晓智能 – CTO 金蒙
           </p>
           <ShowP>
-            曾任百度云智能物联网<HighLightText>核心产品发起人、研发 负责人</HighLightText>
+            曾任百度云智能物联网<HighLightText>核心产品发起人、研发负责人</HighLightText>
           </ShowP>
           <Box></Box>
           <ShowP>
