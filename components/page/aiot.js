@@ -104,7 +104,7 @@ const Aiot = () => {
             全新视频传输技术，<HighLightText>全球</HighLightText>视频延时<HighLightText>最小</HighLightText>。
           </ShowP>
           <ShowP>
-            全新控制技术， 端到端加密，<HighLightText>全球</HighLightText>安全性
+            全新控制技术，端到端加密，<HighLightText>全球</HighLightText>安全性
             <HighLightText>最高</HighLightText>。
           </ShowP>
           <ShowP>

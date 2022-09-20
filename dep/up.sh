@@ -1,5 +1,5 @@
 
-
+bash dep/push.sh
 
 path="/root/daxiaocloud/web/daxiao_home"
 
