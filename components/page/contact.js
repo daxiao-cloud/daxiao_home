@@ -1,5 +1,6 @@
 import { Anchor, Box, Text } from 'grommet';
 import { Location, Mail } from 'grommet-icons';
+import { Foot } from '../common';
 // import AMapLoader from '@amap/amap-jsapi-loader';
 import { useEffect } from 'react';
 const loadMap = async () => {
@@ -83,6 +84,7 @@ const Contact = () => {
           <Text color='#fff'>邮箱：yunasha@daxiaogroup.com </Text>
         </Box>
       </Box>
+      <Foot></Foot>
     </Box>
   );
 };

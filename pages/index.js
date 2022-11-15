@@ -1,4 +1,4 @@
-import { withProjectPage, About, Aiot, Case, Background, Contact, Product } from '../components';
+import { withProjectPage, About, Aiot, Case, Background, Contact, Product, Foot } from '../components';
 import { PageStyle } from '../components/common/head';
 import { Grommet, Button, Box, Text } from 'grommet';
 
